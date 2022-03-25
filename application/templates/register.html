@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+    {% block content %}
+    
+    <h2>New User Registration</h2>
+
+    <div class="container">
+        <form action="" method="GET" name="register">
+            <label for="username"><b>Username</b></label>
+            <input type="text" name="username" placeholder="Enter Username" required>
+            <br>
+            <label for="email"><b>Email</b></label>
+            <input type="text" name="email" placeholder="Enter Email" required>
+            <br>
+            <label for="password"><b>Password</b></label>
+            <input type="password" name="password" placeholder="Enter Password" required>
+            <br class="clear">
+            <input class="btn-submit" type="submit" name="submit" value="Register">
+        </form>
+    </div>
+
+    {% endblock %}
