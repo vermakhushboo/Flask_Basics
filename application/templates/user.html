@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+    {% block content %}
+    
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>Welcome to the Academy!</h1>
+
+            {% for user in users %}
+            <dl>
+                <dt>User Id: {{ user.user_id }}</dt>
+                <dd>Email: {{  user.email }}</dd>
+                <dd>Password: {{ user.password }}</dd>
+            </dl>
+            {% else %}
+            <h3>No users yet!</h3>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% endblock %}
+
