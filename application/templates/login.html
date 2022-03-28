@@ -2,18 +2,23 @@
 
     {% block content %}
     
-    <h1>Login</h1>
+    <h1>{{ title }}</h1>
 
     <div class="row">
         <div class="col-md-6 offset-md-3">
-            <form action="" name="login" method="get">
-                <label for="username"><b>Username</b></label>
-                <input type="text" name="username" placeholder="Enter Username" required>
-                <br>
-                <label for="password"><b>Password</b></label>
-                <input type="password" name="password" placeholder="Enter Password" required>
-                <br class="clear">
-                <input class="btn-submit" type="submit" name="submit" value="Login">
+            <form action="" name="login" method="POST">
+                {{ form.hidden_tag() }}
+                <p>
+                    {{ form.email.label }}<br>
+                    {{ form.email(size=35) }}
+                </p>
+                <p>
+                    {{ form.password.label }}<br>
+                    {{ form.password(size=15) }}
+                </p>
+                <p>
+                    {{ form.submit() }}
+                </p>
             </form>
         </div>
     </div>
